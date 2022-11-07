@@ -12,18 +12,18 @@
 
 #include "libftpf.h"
 
-int ft_putchar(char c)
+int	ft_putchar(char c)
 {
-    write(1,&c,1);
-    return (1); 
+	write(1, &c, 1);
+	return (1);
 }
 
-int ft_strlen(char *str)
+int	ft_strlen(char *str)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (str[i])
-        i++;
-    return (i);
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }

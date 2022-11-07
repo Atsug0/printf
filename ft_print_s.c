@@ -12,13 +12,13 @@
 
 #include "libftpf.h"
 
-int ft_putstr(char *str)
+int	ft_putstr(char *str)
 {
-    if (str != NULL)
-    {
-        write(1,str,ft_strlen(str));        
-        return (ft_strlen(str));
-    }
-    write(1,"(null)",7);
-    return (7);
+	if (str != NULL)
+	{
+		write(1, str, ft_strlen(str));
+		return (ft_strlen(str));
+	}
+	write(1, "(null)", 7);
+	return (7);
 }

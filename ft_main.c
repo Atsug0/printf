@@ -3,11 +3,7 @@
 #include "libftpf.h"
 
 int main(void) {
-    char *s = NULL;
+    int f = printf("%u", -123456);
     printf("\n");
-    printf("%s", s);
-    ft_putstr(s);
-    printf("\n");
-    printf("%i", 033);
-    printf("\n");
+    int s = ft_print_u(-123456);
 }
