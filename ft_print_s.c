@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_s.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: atsug0 <atsug0@student.42.fr>              +#+  +:+       +#+        */
+/*   By: hmoulard <hmoulard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 00:51:00 by atsug0            #+#    #+#             */
-/*   Updated: 2022/10/14 00:56:16 by atsug0           ###   ########.fr       */
+/*   Updated: 2022/11/15 13:07:25 by hmoulard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftpf.h"
+#include "ft_printf.h"
 
 int	ft_putstr(char *str)
 {
@@ -19,6 +19,6 @@ int	ft_putstr(char *str)
 		write(1, str, ft_strlen(str));
 		return (ft_strlen(str));
 	}
-	write(1, "(null)", 7);
-	return (7);
+	write(1, "(null)", 6);
+	return (6);
 }

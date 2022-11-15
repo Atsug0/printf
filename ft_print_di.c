@@ -6,11 +6,11 @@
 /*   By: hmoulard <hmoulard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 14:38:27 by hmoulard          #+#    #+#             */
-/*   Updated: 2022/11/07 15:14:58 by hmoulard         ###   ########.fr       */
+/*   Updated: 2022/11/15 14:18:18 by hmoulard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftpf.h"
+#include "ft_printf.h"
 
 static void	ft_putnbr(int num)
 {
@@ -41,7 +41,7 @@ int	ft_getlen(int num)
 	}
 	else
 		n = num;
-	while (n > 10)
+	while (n >= 10)
 	{
 		n = n / 10;
 		i++;

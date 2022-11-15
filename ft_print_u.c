@@ -6,11 +6,11 @@
 /*   By: hmoulard <hmoulard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 16:03:05 by hmoulard          #+#    #+#             */
-/*   Updated: 2022/11/07 16:19:28 by hmoulard         ###   ########.fr       */
+/*   Updated: 2022/11/15 14:18:55 by hmoulard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftpf.h"
+#include "ft_printf.h"
 
 static void	ft_put_unsigned(unsigned int nb)
 {
@@ -25,7 +25,7 @@ int	ft_print_u(unsigned int nb)
 
 	i = 1;
 	ft_put_unsigned(nb);
-	while (nb > 10)
+	while (nb >= 10)
 	{
 		nb = nb / 10;
 		i++;

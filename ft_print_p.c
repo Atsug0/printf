@@ -6,30 +6,34 @@
 /*   By: hmoulard <hmoulard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 15:19:19 by hmoulard          #+#    #+#             */
-/*   Updated: 2022/11/07 15:48:41 by hmoulard         ###   ########.fr       */
+/*   Updated: 2022/11/15 14:39:11 by hmoulard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftpf.h"
+#include "ft_printf.h"
 
-static void	ft_print_base(long int nb, char *base)
+void	ft_print_base(unsigned long int nb, char *base)
 {
 	if (nb == 0)
 		return ;
-	ft_print_base(nb / 16, "0123456789abcdef");
+	ft_print_base(nb / 16, base);
 	ft_putchar(base[nb % 16]);
 }
 
-static int	ft_gethex_len(long int nb, char *base)
+int	ft_gethex_len(unsigned long int nb, char *base)
 {
 	if (nb == 0)
 		return (0);
-	return (1 + ft_gethex_len(nb / 16, "0123456789abcdef"));
+	return (1 + ft_gethex_len(nb / 16, base));
 }
 
-int	ft_print_p(void *p)
+int	ft_print_p(unsigned long int p)
 {
-	ft_putstr("0x");
-	ft_print_base((long int) p, "0123456789abcdef");
-	return (2 + ft_gethex_len((long int) p, "0123456789abcdef"));
+	if (p != 0)
+	{
+		ft_putstr("0x");
+		ft_print_base(p, "0123456789abcdef");
+		return (2 + ft_gethex_len(p, "0123456789abcdef"));
+	}
+	return (ft_putstr("(nil)"));
 }
